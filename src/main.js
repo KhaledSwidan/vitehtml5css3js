@@ -1,9 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const button = document.getElementById('counter-btn');
-  let count = 0;
+import App from './App';
 
-  button.addEventListener('click', () => {
-    count++;
-    button.textContent = `Clicked ${count} times`;
-  });
-});
+document.getElementById('app').appendChild(App());
