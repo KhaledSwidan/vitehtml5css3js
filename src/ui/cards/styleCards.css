@@ -1,3 +1,8 @@
+section {
+  margin: 35px auto;
+  max-width: 1200px;
+}
+
 /* ✅ تحسين الشبكة لعرض الكروت */
 .cards-container {
   display: grid;
