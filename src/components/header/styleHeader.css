@@ -53,7 +53,7 @@ nav li:hover {
 /* ✅ تحسين شكل القوائم المنسدلة */
 .dropdown {
   position: absolute;
-  width: 50%;
+  width: 11rem;
   transform: translate(-40%, 8%);
   background: rgba(39, 42, 51);
   opacity: 0;
