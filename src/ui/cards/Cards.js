@@ -2,6 +2,7 @@ import people from '../../data/CardData.js';
 import './styleCards.css';
 
 const Cards = () => {
+  const section = document.createElement('section');
   const container = document.createElement('div');
   container.className = 'cards-container';
 
@@ -29,9 +30,10 @@ const Cards = () => {
   `;
 
     container.appendChild(card);
+    section.appendChild(container);
   });
 
-  return container;
+  return section;
 };
 
 export default Cards;
