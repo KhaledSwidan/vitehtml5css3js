@@ -1,17 +1,20 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --color-primary: #4f67f6;
+  --color-secondary: #27387f;
+  --color-bg: #28284e;
+  --color-text: #fefcff;
+  --gradient: linear-gradient(45deg, #01ebaf, #00a9cd, #6380ff);
+  --card: #272524;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  padding: 20px;
-}
-
-header {
-  background-color: #333;
-  color: white;
-  padding: 10px;
-}
-
-footer {
-  margin-top: 20px;
-  font-size: 0.8em;
-  color: #666;
+  font-family: 'Poppins', sans-serif;
+  color: var(--color-text);
+  background: var(--gradient);
 }
