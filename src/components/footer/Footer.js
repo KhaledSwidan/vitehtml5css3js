@@ -1,15 +1,15 @@
 import { logoSrc, sections, socialsLinks } from '../../data/FooterData';
-import style from'./styleFooter.module.css';
+import style from './styleFooter.module.css';
 
 const createElementWithClass = (tag, className) => {
   const element = document.createElement(tag);
-  if (className) element.classList.add(...className.split(' '));
+  if (className) element.classList.add(style[className]);
   return element;
 };
 
 const Footer = () => {
   const footer = createElementWithClass('footer', 'container');
-  const upperDiv = createElementWithClass('div', 'upper-div');
+  const upperDiv = createElementWithClass('div', 'upperDiv');
 
   const logo = createElementWithClass('img', 'logo');
   logo.src = logoSrc;
@@ -19,14 +19,14 @@ const Footer = () => {
   socials.innerHTML = socialsLinks
     .map(
       (social) => `
-    <a class="socialItem" 
-       href="https://www.${social}.com" 
-       target="_blank" 
-       rel="noopener noreferrer" 
-       aria-label="${social}" 
-       title="${social.charAt(0).toUpperCase() + social.slice(1)}">
-      <i class="fa-brands fa-${social}"></i>
-    </a>`
+      <a class="${style.socialItem}"  
+         href="https://www.${social}.com" 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         aria-label="${social}" 
+         title="${social.charAt(0).toUpperCase() + social.slice(1)}">
+        <i class="fa-brands fa-${social}"></i>
+      </a>`
     )
     .join('');
 
