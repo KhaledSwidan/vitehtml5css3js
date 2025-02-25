@@ -1,4 +1,4 @@
-import './styleHeader.css';
+import style from './styleHeader.module.css';
 
 const Header = () => {
   const header = document.createElement('header');

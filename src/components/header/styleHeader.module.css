@@ -19,7 +19,6 @@ ul {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  list-style: none;
 }
 li {
   width: 100%;
@@ -54,7 +53,7 @@ nav li:hover {
 .dropdown {
   position: absolute;
   width: 11rem;
-  transform: translate(-40%, 8%);
+  transform: translate(-22%, 8%);
   background: rgba(39, 42, 51);
   opacity: 0;
   visibility: hidden;

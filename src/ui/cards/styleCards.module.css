@@ -4,7 +4,7 @@ section {
 }
 
 /* ✅ تحسين الشبكة لعرض الكروت */
-.cards-container {
+.cards_container {
   gap: 50px;
   padding: 20px;
   max-width: 1200px;
