@@ -7,32 +7,32 @@ header {
 }
 
 /* ✅ تحسين تصميم الناف بار */
-nav {
+header nav {
   background: rgba(39, 42, 51, 0.9);
   display: flex;
   border-radius: 5px;
   padding: 0;
 }
 
-ul {
+header ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
-li {
+header li {
   width: 100%;
   padding: 15px 10px;
   text-align: center;
   cursor: pointer;
   transition: background-color 0.3s;
 }
-nav li button.dropdown-btn {
+header nav li button.dropdown_btn {
   background: transparent;
   border: none;
 }
-nav .item,
-nav li button.dropdown-btn {
+header nav .item,
+header nav li button.dropdown_btn {
   font-size: 1.1rem;
   padding: 0px 20px;
   cursor: pointer;
@@ -44,13 +44,13 @@ nav li button.dropdown-btn {
   display: inline-block;
   width: max-content;
 }
-nav li:hover {
+header nav li:hover {
   background-color: rgba(83, 98, 176, 0.8);
   border-radius: 5px;
 }
 
 /* ✅ تحسين شكل القوائم المنسدلة */
-.dropdown {
+header .dropdown {
   position: absolute;
   width: 11rem;
   transform: translate(-22%, 8%);
@@ -63,14 +63,11 @@ nav li:hover {
   flex-direction: column;
   align-items: center;
 }
-
-.item:hover .dropdown,
-.dropdown-btn[aria-expanded='true'] + .dropdown {
+header .open {
   opacity: 1;
   visibility: visible;
 }
-
-.dropdown a {
+header .dropdown a {
   display: block;
   padding: 10px;
   text-align: center;
@@ -80,6 +77,6 @@ nav li:hover {
   transition: background-color 0.3s;
 }
 
-.dropdown li:hover {
+header .dropdown li:hover {
   background: rgb(83, 98, 176);
 }

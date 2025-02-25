@@ -9,7 +9,7 @@
   --color-bg: #28284e;
   --color-text: #fefcff;
   --gradient: linear-gradient(45deg, #01ebaf, #00a9cd, #6380ff);
-  --gradient-footer: linear-gradient(45deg, #00231a, #1b5b68, #1e307f);
+  --gradient-footer: linear-gradient(45deg, #272524, #083a45, #0a1b64);
   --card: #272524;
 }
 body {
