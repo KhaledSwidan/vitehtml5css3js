@@ -11,6 +11,7 @@ const navItems = [
   },
   { name: 'Contact', link: '/contact' },
   { name: 'Login', link: '/login' },
+  { name: 'Signup', link: '/signup' },
 ];
 
 export default navItems;

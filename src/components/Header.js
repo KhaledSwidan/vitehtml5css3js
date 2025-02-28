@@ -18,6 +18,7 @@ const Header = () => {
       const dropdownBtn = document.createElement('button');
       dropdownBtn.classList.add(style.dropdown_btn);
       dropdownBtn.setAttribute('aria-expanded', 'false');
+      dropdownBtn.setAttribute('type', 'button');
       dropdownBtn.textContent = `${item.name} ▼`;
 
       const dropdownList = document.createElement('ul');

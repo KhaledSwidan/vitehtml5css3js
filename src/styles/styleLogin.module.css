@@ -10,6 +10,7 @@
   background-size: cover;
   font-family: 'Euclid Circular A';
   position: relative;
+  
 }
 .login_container::after {
   content: '';
@@ -151,3 +152,18 @@
   text-decoration: none;
   margin-bottom: 30px;
 }
+.login_form p {
+  margin: 0 0 22px;
+  color: rgb(255 255 255 / 50%);
+}
+.login_form p > a {
+  color: rgb(255 255 255 / 96%);
+  transition: transform 0.3s ease, color 0.3s ease;
+  display: inline-block;
+  margin-left: 8px;
+}
+.login_form p > a:hover {
+  transform: scale(1.1);
+  color: rgb(255 255 255);
+}
+

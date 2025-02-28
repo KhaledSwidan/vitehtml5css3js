@@ -1,30 +1,45 @@
+/* تعريف المتغيرات */
+:root {
+  --primary-color: #007bff;
+  --primary-hover: #0056b3;
+  --text-color: #555;
+  --error-color: red;
+  --font-size-lg: 3rem;
+  --font-size-md: 1.2rem;
+  --spacing-lg: 4rem; /* 64px */
+  --spacing-md: 2rem; /* 32px */
+  --spacing-sm: 1rem; /* 16px */
+}
+
 .not_found {
   text-align: center;
-  padding: 50px;
-  margin: 70px 0;
+  padding: var(--spacing-lg);
+  margin: var(--spacing-lg) 0;
 }
 
 .not_found h1 {
-  font-size: 3rem;
-  color: red;
+  font-size: var(--font-size-lg);
+  color: var(--error-color);
+  font-weight: bold;
 }
 
 .not_found p {
-  font-size: 1.2rem;
-  color: #555;
+  font-size: var(--font-size-md);
+  color: var(--text-color);
 }
 
 .not_found .back_home {
   display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
+  margin-top: var(--spacing-md);
+  padding: var(--spacing-sm) var(--spacing-md);
   color: white;
-  background: #007bff;
+  background: var(--primary-color);
   text-decoration: none;
   border-radius: 5px;
-  transition: background 0.3s;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .not_found .back_home:hover {
-  background: #0056b3;
+  background: var(--primary-hover);
+  transform: scale(1.05);
 }

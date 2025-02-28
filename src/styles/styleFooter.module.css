@@ -1,74 +1,81 @@
+/* ✅ تعريف المتغيرات */
+:root {
+  --primary-color: #4f67f6;
+  --text-color: rgb(255 255 255 / 60%);
+  --text-light: #f9f9f9;
+  --footer-bg: var(--gradient-footer);
+  --spacing-lg: 3rem;
+  --spacing-md: 2rem;
+  --spacing-sm: 1rem;
+  --border-radius: 5px;
+  --transition: 0.3s ease-in-out;
+}
+
 .container {
   margin: 0 auto;
 }
+
 footer {
   width: 100%;
   position: relative;
-  padding: 20px;
+  padding: var(--spacing-md);
   padding-bottom: 0;
-  background: var(--gradient-footer);
-  grid-template-columns: repeat(2, 1fr);
-  color: #f9f9f9;
+  background: var(--footer-bg);
+  color: var(--text-light);
 }
+
 footer::after {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  inset: 0;
   height: 68px;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-  z-index: 1; /* ✅ يجعل التأثير فوق الخلفية */
-  pointer-events: none; /* ✅ يمنع التفاعل مع العنصر */
-  backdrop-filter: blur(5px); /* ✅ يعطي تأثير ضبابي */
-  border-radius: 5px; /* ✅ يضيف حواف ناعمة */
   background: linear-gradient(to top, rgba(0, 0, 0, 0.2), transparent);
   filter: drop-shadow(0px -10px 15px rgba(0, 0, 0, 0.3));
+  pointer-events: none;
+  border-radius: var(--border-radius);
+  backdrop-filter: blur(5px);
 }
+
 .upperDiv {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  z-index: 1;
+  position: relative;
+  top: -10px;
 }
+
 .logo {
   object-fit: contain;
-  position: relative; /* ✅ يعزل اللوجو عن التأثير */
-  z-index: 2; /* ✅ يجعله فوق طبقة الضباب */
 }
+
 .socials {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 15px;
+  gap: var(--spacing-sm);
   font-size: 18px;
-  z-index: 100;
 }
+
 .socialItem {
-  color: #f9f9f9;
+  color: var(--text-light);
   font-size: 1.2rem;
   cursor: pointer;
-  display: inline-block; /* ⬅️ يجعل العنصر مرئيًا وقابلًا للنقر */
-  min-width: 30px; /* ⬅️ يضمن حجمًا مرئيًا للأيقونة */
+  min-width: 30px;
   min-height: 30px;
-  text-align: center; /* يضمن تمركز الأيقونة */
-  line-height: 30px; /* يضمن تناسق الارتفاع */
-  transition: 0.3s;
+  text-align: center;
+  line-height: 30px;
+  transition: var(--transition);
 }
-.socialItem:hover {
-  color: #4f67f6;
-  transition: 0.3s;
-  transform: scale(1.2);
-}
+
 .links {
-  padding: 40px 80px 50px;
+  padding: var(--spacing-lg);
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  width: 100%;
   flex-wrap: wrap;
-  gap: 3rem;
+  gap: var(--spacing-lg);
 }
+
 .links ul {
   margin: 0;
   padding: 0;
@@ -76,58 +83,66 @@ footer::after {
   flex-direction: column;
   gap: 5px;
 }
-.links ul li:not(:first-child) {
-  font-size: 0.8rem;
-  font-weight: 400;
-  color: rgb(255 255 255 / 60%);
-  padding: 5px 0;
-  width: 100%;
-}
+
 .links h2 {
   font-size: 16px;
   font-weight: 600;
-  color: rgb(255 255 255 / 60%);
+  color: var(--text-color);
   margin-bottom: 8px;
+  position: relative;
 }
-.links h2:after {
+
+.links h2::after {
   content: '';
   display: block;
   width: 50px;
   height: 2px;
   background: #fff;
   margin-top: 5px;
-  transition: 0.3s all ease;
+  transition: var(--transition);
 }
-.links ul:hover h2:after {
+
+.links ul:hover h2::after {
   width: 100%;
-  transition: 0.3s all ease;
 }
+
 .links ul li a {
-  color: #fff;
+  color: var(--text-light);
   font-size: 13px;
-  width: 100%;
   display: inline-block;
-  transition: 0.3s;
+  transition: var(--transition);
 }
+
+.socialItem:hover,
 .links ul li:not(:first-child):hover a {
-  color: #4f67f6;
-  transition: 0.3s all ease 0s;
+  color: var(--primary-color);
   transform: scale(1.1);
 }
+
 .links address {
   font-style: normal;
-  line-height: 1.5;
   font-size: 12px;
+  line-height: 1.5;
 }
 
 @media (max-width: 600px) {
+  .links {
+    padding: var(--spacing-md);
+  }
+
   .upperDiv {
     flex-direction: column;
-    gap: 30px;
+    align-items: center;
+    text-align: center;
+    gap: var(--spacing-md);
   }
-  .upperDiv ul {
-    display: flex;
+
+  .socials {
     justify-content: center;
-    gap: 15px;
+  }
+}
+@media (max-width: 492px) {
+  .links {
+    padding: var(--spacing-sm);
   }
 }

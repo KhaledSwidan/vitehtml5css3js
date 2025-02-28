@@ -1,0 +1,144 @@
+@keyframes move {
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.signup_container {
+  background-image: url('../assets/signupBg.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: move 15s alternate infinite linear;
+  background-size: cover;
+  position: relative;
+  font-family: 'Euclid Circular A';
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.signup_container::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: rgb(0 0 0 / 35%);
+}
+.signup_container button,
+.signup_container input {
+  border: 0;
+  width: 100%;
+  height: 60px;
+  background: transparent;
+  font-family: inherit;
+  font-size: 16px;
+  outline: none;
+}
+.signup {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  width: 100%;
+  padding: 70px 30px 44px;
+  background: rgb(0 0 0 / 16%);
+  backdrop-filter: blur(10px);
+  max-width: 500px;
+  min-width: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+.title {
+  text-align: center;
+  margin-top: 50px;
+}
+.title > h2 {
+  font-size: 32px;
+  font-weight: 400;
+  margin: 0 0 6px;
+  color: rgb(255 255 255 / 96%);
+}
+.title > h3 {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0 0 30px;
+  color: rgb(255 255 255 / 40%);
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+.textbox {
+  position: relative;
+  margin-bottom: 16px;
+}
+.textbox span {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  left: 0;
+  font-size: 22px;
+  pointer-events: none;
+  color: rgb(255 255 255 / 40%);
+}
+.textbox input {
+  padding: 0 24px 0 36px;
+  border-bottom: 2px solid rgb(255 255 255 / 5%);
+  color: rgb(255 255 255 / 96%);
+  height: 72px;
+  transition: 0.3s;
+}
+:is(input:focus, input:valid) ~ label {
+  translate: -40px -40px;
+  scale: 0.875;
+}
+input:focus ~ label {
+  color: rgb(255 255 255 / 40%);
+}
+input:focus {
+  border-color: rgb(255 255 255 / 76%);
+}
+:is(input:focus, input:valid) ~ span {
+  color: rgb(255 255 255 / 76%);
+}
+.textbox label {
+  position: absolute;
+  top: 50%;
+  left: 36px;
+  translate: 0 -50%;
+  color: rgb(255 255 255 / 40%);
+  pointer-events: none;
+  transition: 0.4s;
+}
+.form button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 0 24px;
+  border-radius: 6px;
+  background: rgb(255 255 255 / 12%);
+  color: #f9f9f9;
+  border: 0;
+  font-family: inherit;
+  font-size: 22px;
+  letter-spacing: 2px;
+  transition: 0.3s ease, color 0.3s ease;
+}
+.form button:hover {
+  background: rgb(255 255 255 / 20%);
+}
+.signup p {
+  margin: 0 0 22px;
+  color: rgb(255 255 255 / 50%);
+}
+.signup p > a {
+  color: rgb(255 255 255 / 96%);
+  transition: transform 0.3s ease, color 0.3s ease;
+  display: inline-block;
+  margin-left: 8px;
+}
+.signup p > a:hover {
+  transform: scale(1.1);
+  color: rgb(255 255 255);
+}

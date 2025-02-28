@@ -2,9 +2,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import './styles/style.css';
 
 import Navigo from 'navigo';
-import Home from './pages/home';
-import NotFound from './pages/NotFound';
-import Login from './pages/login';
+import { Home, Login, NotFound, Signup } from './pages';
 
 const router = new Navigo('/', {
   linksSelector: 'a',
@@ -25,6 +23,7 @@ const render = (content) => {
 router
   .on('/', () => render(Home()))
   .on('/login', () => render(Login()))
+  .on('/signup', () => render(Signup()))
   .resolve();
 
 // ✅ صفحة 404
