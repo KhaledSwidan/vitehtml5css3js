@@ -1,5 +1,5 @@
-import { logoSrc, sections, socialsLinks } from '../../data/FooterData';
-import style from './styleFooter.module.css';
+import { logoSrc, sections, socialsLinks } from '../data/FooterData';
+import style from '../styles/styleFooter.module.css';
 
 const createElementWithClass = (tag, className) => {
   const element = document.createElement(tag);

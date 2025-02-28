@@ -1,5 +1,5 @@
-import people from '../../data/CardData.js';
-import styles from './styleCards.module.css';
+import people from '../data/CardData.js';
+import styles from '../styles/styleCards.module.css';
 
 const Cards = () => {
   const section = document.createElement('section');

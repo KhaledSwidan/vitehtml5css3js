@@ -1,5 +1,5 @@
-import navItems from '../../data/HeaderData';
-import style from './styleHeader.module.css';
+import navItems from '../data/HeaderData';
+import style from '../styles/styleHeader.module.css';
 
 const Header = () => {
   const header = document.createElement('header');
@@ -32,10 +32,28 @@ const Header = () => {
         dropdownList.appendChild(subLi);
       });
 
-      li.addEventListener('click', () => {
+      // ✅ فتح وإغلاق القائمة عند الضغط على الزر
+      dropdownBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
         const isExpanded = dropdownBtn.getAttribute('aria-expanded') === 'true';
         dropdownBtn.setAttribute('aria-expanded', !isExpanded);
         dropdownList.classList.toggle(style.open, !isExpanded);
+      });
+
+      // ✅ إغلاق القائمة عند الضغط خارجها
+      document.addEventListener('click', (e) => {
+        if (!dropdownContainer.contains(e.target)) {
+          dropdownBtn.setAttribute('aria-expanded', 'false');
+          dropdownList.classList.remove(style.open);
+        }
+      });
+
+      // ✅ إغلاق القائمة عند الضغط على زر Escape
+      document.addEventListener('keyup', (e) => {
+        if (e.key === 'Escape') {
+          dropdownBtn.setAttribute('aria-expanded', 'false');
+          dropdownList.classList.remove(style.open);
+        }
       });
 
       dropdownContainer.appendChild(dropdownBtn);
@@ -45,6 +63,7 @@ const Header = () => {
       const link = document.createElement('a');
       link.classList.add(style.item);
       link.href = item.link;
+      link.setAttribute('data-navigo', ''); // ✅ التصحيح هنا
       link.textContent = item.name;
       li.appendChild(link);
     }

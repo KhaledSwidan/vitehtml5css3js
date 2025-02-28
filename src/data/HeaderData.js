@@ -1,15 +1,16 @@
 const navItems = [
-  { name: 'Home', link: '#' },
-  { name: 'About', link: '#' },
+  { name: 'Home', link: '/' },
+  { name: 'About', link: '/about' },
   {
     name: 'Skills',
     dropdown: [
-      { name: 'React', link: '#' },
-      { name: 'Angular', link: '#' },
-      { name: 'Vue', link: '#' },
+      { name: 'React', link: '/skillReact' },
+      { name: 'Angular', link: '/skillAngular' },
+      { name: 'Vue', link: '/skillVue' },
     ],
   },
-  { name: 'Contact', link: '#' },
+  { name: 'Contact', link: '/contact' },
+  { name: 'Login', link: '/login' },
 ];
 
 export default navItems;
