@@ -1,9 +1,9 @@
 {
+  "homepage": "https://KhaledSwidan.github.io/vitehtml5css3js",
   "name": "vitehtmlcssjs",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://KhaledSwidan.github.io/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
